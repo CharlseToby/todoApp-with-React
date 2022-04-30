@@ -48,12 +48,30 @@ body {
       transform: rotate(45deg);
     }
   }
+  .page{
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    color: $primaryColor;
+    font-size: 20px;
+    font-family: "Titillium Web",
+    sans-serif;
+
+    a{
+      list-style-type: none;
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+    }
+  }
+
+
   .date {
     position: absolute;
     bottom: 10px;
-    left: 10px;
+    right: 10px;
     color: $primaryColor;
-    font-size: 25px;
+    font-size: 20px;
     font-family: "Titillium Web", sans-serif;
   }
   .uncheckedItem {
@@ -88,6 +106,14 @@ body {
     padding: 0;
     margin: 0 auto;
 
+    .endTime{
+      position: absolute;
+      top: 13px;
+      right: 70px;
+      padding: 0;
+      margin: 0;
+    }
+
     .co {
       position: absolute;
       font-size: 25px;
@@ -115,13 +141,19 @@ body {
       text-decoration: line-through;
       color: #ccc;
     }
+    p.modify{
+      position: absolute;
+      right: 44px;
+      bottom: -1px;
+      cursor: pointer;
+    }
     .de {
       position: absolute;
       font-size: 18px;
       outline: none;
       border: none;
       background-color: inherit;
-      right: 15px;
+      right: 8px;
       top: 10px;
     }
     .de:hover {
@@ -133,17 +165,40 @@ body {
 
 /* ----- ADD ITEM SECTION ----- */
 .add-to-do {
-  position: relative;
-  width: 360px;
-  height: 40px;
+  // position: relative;
+  width: 350px;
+  height: auto;
   background-color: $primaryColor;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
   padding: 10px;
   border-radius: 0 0 15px 15px;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 
+  .form-control{
+    display: grid;
+    grid-template-columns: 90px 250px;
+    justify-content: space-between;
+    align-items: center;
+
+    input {
+      flex-grow: 2;
+      // position: absolute;
+      // left: 65px;
+      height: 30px;
+      // width: 230px;
+      background-color: transparent;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 6px;
+      outline: none;
+      font-size: 20px;
+      padding-left: 10px;
+    }
+  }
+
   button {
-    position: absolute;
-    top: 13px;
+    // position: absolute;
     border: 1px solid #4162f6;
     border-radius: 5px;
     outline: none;
@@ -153,43 +208,28 @@ body {
   button:hover {
     cursor: pointer;
   }
-  input {
-    position: absolute;
-    left: 65px;
-    height: 35px;
-    width: 290px;
-    background-color: transparent;
-    border: none;
-    font-size: 20px;
-    padding-left: 10px;
-  }
-  input:focus {
-    border: 1px solid #4162f6;
-    outline: none;
-    border-radius: 6px;
-  }
 }
 .add-to-do input::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
-  color: #4162f6;
+  color: rgba(0, 0, 0, 0.3);
   font-family: "Titillium Web", sans-serif;
   font-size: 20px;
 }
 .add-to-do input::-moz-placeholder {
   /* Firefox 19+ */
-  color: #4162f6;
+  color: rgba(0, 0, 0, 0.3);
   font-family: "Titillium Web", sans-serif;
   font-size: 20px;
 }
 .add-to-do input:-ms-input-placeholder {
   /* IE 10+ */
-  color: #4162f6;
+  color: rgba(0, 0, 0, 0.3);
   font-family: "Titillium Web", sans-serif;
   font-size: 20px;
 }
 .add-to-do input:-moz-placeholder {
   /* Firefox 18- */
-  color: #4162f6;
+  color: rgba(0, 0, 0, 0.3);
   font-family: "Titillium Web", sans-serif;
   font-size: 20px;
 }
