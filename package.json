@@ -1,7 +1,7 @@
 {
   "name": "todo-app",
   "version": "0.1.0",
-  "homepage": "https://CharlseToby.github.io/Todoapp-with-pages",
+  "homepage": "https://CharlseToby.github.io/todoApp-with-React",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
